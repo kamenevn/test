@@ -157,8 +157,11 @@ class Sample_Class extends Foo_Abstract {
 ```
 
 Название классов
-| Tables   |      Are      |  Cool |
-|----------|:-------------:|------:|
-| col 1 is |  left-aligned | $1600 |
-| col 2 is |    centered   |   $12 |
-| col 3 is | right-aligned |    $1 |
+| Название класса  | Путь до файла |
+| ------------- | ------------- |
+| Controller_Template | classes/Controller/Template.php |
+| Model_User  | classes/Model/User.php  |
+| Model_BlogPost  | classes/Model/BlogPost.php |
+| Database  | classes/Database.php |
+| Database_Query | classes/Database/Query.php |
+| Form  | classes/Form.php  |

@@ -157,6 +157,7 @@ class Sample_Class extends Foo_Abstract {
 ```
 
 Название классов
+
 | Название класса  | Путь до файла |
 | ------------- | ------------- |
 | Controller_Template | classes/Controller/Template.php |

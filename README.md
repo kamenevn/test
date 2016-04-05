@@ -168,6 +168,7 @@ class Sample_Class extends Foo_Abstract {
 | Form  | classes/Form.php  |
 
 Название классов необходимо указывать используя стиль "under_score". camelCase в названии классов запрещенно использовать.
+camelCase используется только в моделях Doctrine и вызове методов Doctrine и ее моделей.
 ```php
 // Controller class, используем Controller_ префикс
 class Controller_Apple extends Controller {

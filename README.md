@@ -349,3 +349,46 @@ $foo = $bar ? $foo : $bar;
 // не правильно
 # Не правильно
 ```
+
+### Дополнительно
+Не использовать оператор echo для вывода html-тэгов, а использовать «встраивание» html-кода:
+```php
+// Не правильно
+echo "<table>";
+echo "<tr><td>Name</td><td>Position</td></tr>";
+foreach ($employees as $employee) {
+    echo "<tr><td>$employee[name]</td><td>$employee[position]</td></tr>";
+}
+echo "</table>";
+
+// Правильно
+<table>
+  <tr><td>Name</td><td>Position</td></tr>
+<?php foreach ($employees as $employee) { ?>
+  <tr><td><?=$employee['name'];?></td><td><?=$employee['position'];?></td></tr>
+<?php } ?>
+</table>
+```
+Использование пустого пространства для усиления логической структуры кода
+```php
+// Не правильно
+$lt = localtime();
+$name = $_GET['name'];
+$email = $_GET['email'];
+$month = $lt['tm_mon'] + 1;
+$year = $lt['tm_year'] + 1900;
+$day = $lt['tm_day'];
+$address = $_GET['address'];
+
+// Правильно
+$name    = $_GET['name'];
+$email   = $_GET['email'];
+$address = $_GET['address'];
+
+$lt    = localtime();
+$day   = $lt['tm_day'];
+$month = $lt['tm_mon'] + 1;
+$year  = $lt['tm_year'] + 1900;
+```
+
+При создании таблиц(не для special_projects) создавать Doctrine модели для облегчения работы и связки моделей

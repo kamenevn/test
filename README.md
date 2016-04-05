@@ -19,7 +19,16 @@ $a = 'Обычная строка';
 $sql = "SELECT `id`, `name` from `chocoaccount`.`users_data` WHERE `name`='Nikolay'";
 ```
 
-Подстановка переменных разрешается с использованием нижеприведенных форм:
+Подстановка переменных разрешается в такой форме:
 ```php
-
+$str = 'one'.$var.'two';
 ```
+Вот так подставлять переменные не верно:
+```php
+$str = 'one'. $var .'two';
+$str = 'one' . $var . 'two';
+$str = 'one $var two';
+$str = 'one {$var} two";
+```
+
+
